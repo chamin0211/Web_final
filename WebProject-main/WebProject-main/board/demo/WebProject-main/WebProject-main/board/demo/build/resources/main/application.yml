@@ -1,0 +1,21 @@
+# 서버 포트 설정
+server:
+  port: 8082 #스프링부트 작업을 하면 기본포트가 8080으로 설정
+
+# database 연동 설정
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sys?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: chamin
+    password: cha031802!?!
+  thymeleaf:
+    cache: false
+
+  # spring data jpa 설정
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create
